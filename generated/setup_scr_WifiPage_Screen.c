@@ -29,7 +29,7 @@ void setup_scr_WifiPage_Screen(lv_ui *ui){
 	lv_style_set_bg_grad_dir(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
 	lv_style_set_bg_opa(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_border_color(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, lv_color_make(0x99, 0x99, 0x99));
-	lv_style_set_border_width(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, 1);
+	lv_style_set_border_width(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_border_opa(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_pad_left(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_right(&style_WifiPage_Screen_main_container_main, LV_STATE_DEFAULT, 0);

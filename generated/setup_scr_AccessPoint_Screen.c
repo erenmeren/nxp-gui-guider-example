@@ -14,6 +14,7 @@ void setup_scr_AccessPoint_Screen(lv_ui *ui){
 
 	//Write codes AccessPoint_Screen
 	ui->AccessPoint_Screen = lv_obj_create(NULL, NULL);
+	lv_anim_path_t lv_anim_path_AccessPoint_Screen_main_container = {.cb = lv_anim_path_ease_in_out};
 
 	//Write codes AccessPoint_Screen_main_container
 	ui->AccessPoint_Screen_main_container = lv_cont_create(ui->AccessPoint_Screen, NULL);
@@ -29,7 +30,7 @@ void setup_scr_AccessPoint_Screen(lv_ui *ui){
 	lv_style_set_bg_grad_dir(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
 	lv_style_set_bg_opa(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_border_color(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, lv_color_make(0x99, 0x99, 0x99));
-	lv_style_set_border_width(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 1);
+	lv_style_set_border_width(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_border_opa(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_pad_left(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_right(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
@@ -183,7 +184,7 @@ void setup_scr_AccessPoint_Screen(lv_ui *ui){
 	lv_style_set_bg_grad_dir(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
 	lv_style_set_bg_opa(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_border_color(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, lv_color_make(0x99, 0x99, 0x99));
-	lv_style_set_border_width(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, 1);
+	lv_style_set_border_width(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_border_opa(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_pad_left(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_right(&style_AccessPoint_Screen_qr_container_main, LV_STATE_DEFAULT, 0);

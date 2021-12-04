@@ -29,7 +29,7 @@ void setup_scr_Home_Screen(lv_ui *ui){
 	lv_style_set_bg_grad_dir(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
 	lv_style_set_bg_opa(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_border_color(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, lv_color_make(0x99, 0x99, 0x99));
-	lv_style_set_border_width(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, 1);
+	lv_style_set_border_width(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_border_opa(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, 255);
 	lv_style_set_pad_left(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_right(&style_Home_Screen_main_container_main, LV_STATE_DEFAULT, 0);
@@ -39,6 +39,58 @@ void setup_scr_Home_Screen(lv_ui *ui){
 	lv_obj_set_pos(ui->Home_Screen_main_container, 0, 0);
 	lv_obj_set_size(ui->Home_Screen_main_container, 320, 240);
 	lv_obj_set_click(ui->Home_Screen_main_container, false);
+
+	//Write codes Home_Screen_open_menu_btn
+	ui->Home_Screen_open_menu_btn = lv_btn_create(ui->Home_Screen_main_container, NULL);
+
+	//Write style LV_BTN_PART_MAIN for Home_Screen_open_menu_btn
+	static lv_style_t style_Home_Screen_open_menu_btn_main;
+	lv_style_reset(&style_Home_Screen_open_menu_btn_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Home_Screen_open_menu_btn_main
+	lv_style_set_radius(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, 50);
+	lv_style_set_bg_color(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_border_color(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, lv_color_make(0x01, 0xa2, 0xb1));
+	lv_style_set_border_width(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_border_opa(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_outline_color(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, lv_color_make(0xd4, 0xd7, 0xd9));
+	lv_style_set_outline_opa(&style_Home_Screen_open_menu_btn_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Home_Screen_open_menu_btn, LV_BTN_PART_MAIN, &style_Home_Screen_open_menu_btn_main);
+	lv_obj_set_pos(ui->Home_Screen_open_menu_btn, 147, 224);
+	lv_obj_set_size(ui->Home_Screen_open_menu_btn, 26, 32);
+	ui->Home_Screen_open_menu_btn_label = lv_label_create(ui->Home_Screen_open_menu_btn, NULL);
+	lv_label_set_text(ui->Home_Screen_open_menu_btn_label, "");
+	lv_obj_set_style_local_text_color(ui->Home_Screen_open_menu_btn_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+
+	//Write codes Home_Screen_info_label
+	ui->Home_Screen_info_label = lv_label_create(ui->Home_Screen_main_container, NULL);
+	lv_label_set_text(ui->Home_Screen_info_label, "Ready");
+	lv_label_set_long_mode(ui->Home_Screen_info_label, LV_LABEL_LONG_BREAK);
+	lv_label_set_align(ui->Home_Screen_info_label, LV_LABEL_ALIGN_CENTER);
+
+	//Write style LV_LABEL_PART_MAIN for Home_Screen_info_label
+	static lv_style_t style_Home_Screen_info_label_main;
+	lv_style_reset(&style_Home_Screen_info_label_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Home_Screen_info_label_main
+	lv_style_set_radius(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_bg_color(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_text_color(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_text_font(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_10);
+	lv_style_set_text_letter_space(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_left(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_right(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_top(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_bottom(&style_Home_Screen_info_label_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Home_Screen_info_label, LV_LABEL_PART_MAIN, &style_Home_Screen_info_label_main);
+	lv_obj_set_pos(ui->Home_Screen_info_label, 0, 196);
+	lv_obj_set_size(ui->Home_Screen_info_label, 320, 0);
 
 	//Write codes Home_Screen_label_2
 	ui->Home_Screen_label_2 = lv_label_create(ui->Home_Screen_main_container, NULL);
@@ -94,35 +146,9 @@ void setup_scr_Home_Screen(lv_ui *ui){
 	lv_obj_set_pos(ui->Home_Screen_time_label, 20, 11);
 	lv_obj_set_size(ui->Home_Screen_time_label, 25, 0);
 
-	//Write codes Home_Screen_btn_1
-	ui->Home_Screen_btn_1 = lv_btn_create(ui->Home_Screen_main_container, NULL);
-
-	//Write style LV_BTN_PART_MAIN for Home_Screen_btn_1
-	static lv_style_t style_Home_Screen_btn_1_main;
-	lv_style_reset(&style_Home_Screen_btn_1_main);
-
-	//Write style state: LV_STATE_DEFAULT for style_Home_Screen_btn_1_main
-	lv_style_set_radius(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, 10);
-	lv_style_set_bg_color(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, lv_color_make(0xb0, 0xe2, 0xd9));
-	lv_style_set_bg_grad_color(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, lv_color_make(0xb0, 0xe2, 0xd9));
-	lv_style_set_bg_grad_dir(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
-	lv_style_set_bg_opa(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, 255);
-	lv_style_set_border_color(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, lv_color_make(0x01, 0xa2, 0xb1));
-	lv_style_set_border_width(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_border_opa(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_outline_color(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, lv_color_make(0xd4, 0xd7, 0xd9));
-	lv_style_set_outline_opa(&style_Home_Screen_btn_1_main, LV_STATE_DEFAULT, 0);
-	lv_obj_add_style(ui->Home_Screen_btn_1, LV_BTN_PART_MAIN, &style_Home_Screen_btn_1_main);
-	lv_obj_set_pos(ui->Home_Screen_btn_1, 75, 191);
-	lv_obj_set_size(ui->Home_Screen_btn_1, 170, 34);
-	ui->Home_Screen_btn_1_label = lv_label_create(ui->Home_Screen_btn_1, NULL);
-	lv_label_set_text(ui->Home_Screen_btn_1_label, "Ready to print");
-	lv_obj_set_style_local_text_color(ui->Home_Screen_btn_1_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
-	lv_obj_set_style_local_text_font(ui->Home_Screen_btn_1_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_12);
-
 	//Write codes Home_Screen_label_1
 	ui->Home_Screen_label_1 = lv_label_create(ui->Home_Screen_main_container, NULL);
-	lv_label_set_text(ui->Home_Screen_label_1, "Restaurant menu");
+	lv_label_set_text(ui->Home_Screen_label_1, "Menu");
 	lv_label_set_long_mode(ui->Home_Screen_label_1, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->Home_Screen_label_1, LV_LABEL_ALIGN_CENTER);
 
@@ -144,7 +170,7 @@ void setup_scr_Home_Screen(lv_ui *ui){
 	lv_style_set_pad_top(&style_Home_Screen_label_1_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_Home_Screen_label_1_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->Home_Screen_label_1, LV_LABEL_PART_MAIN, &style_Home_Screen_label_1_main);
-	lv_obj_set_pos(ui->Home_Screen_label_1, 102, 31);
+	lv_obj_set_pos(ui->Home_Screen_label_1, 102, 29);
 	lv_obj_set_size(ui->Home_Screen_label_1, 120, 0);
 
 	//Write codes Home_Screen_logo
@@ -189,8 +215,8 @@ void setup_scr_Home_Screen(lv_ui *ui){
 	lv_style_set_pad_top(&style_Home_Screen_qr_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_Home_Screen_qr_container_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->Home_Screen_qr_container, LV_CONT_PART_MAIN, &style_Home_Screen_qr_container_main);
-	lv_obj_set_pos(ui->Home_Screen_qr_container, 97.5, 58);
-	lv_obj_set_size(ui->Home_Screen_qr_container, 125, 125);
+	lv_obj_set_pos(ui->Home_Screen_qr_container, 92.5, 53);
+	lv_obj_set_size(ui->Home_Screen_qr_container, 135, 135);
 	lv_obj_set_click(ui->Home_Screen_qr_container, false);
 	lv_cont_set_layout(ui->Home_Screen_qr_container, LV_LAYOUT_OFF);
 	lv_cont_set_fit(ui->Home_Screen_qr_container, LV_FIT_NONE);
