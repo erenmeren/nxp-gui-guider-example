@@ -53,6 +53,42 @@ void events_init_AccessPoint_Screen(lv_ui *ui)
 	lv_obj_set_event_cb(ui->AccessPoint_Screen_logo, AccessPoint_Screen_logoevent_handler);
 }
 
+static void Activation_Screen_send_activation_email_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		lv_obj_set_hidden(guider_ui.Activation_Screen_send_activation_email_btn, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void Activation_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_CLICKED:
+	{
+		if (!lv_debug_check_obj_valid(guider_ui.Home_Screen))
+			setup_scr_Home_Screen(&guider_ui);
+		lv_scr_load_anim(guider_ui.Home_Screen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 400, 75, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+void events_init_Activation_Screen(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->Activation_Screen_send_activation_email_btn, Activation_Screen_send_activation_email_btnevent_handler);
+	lv_obj_set_event_cb(ui->Activation_Screen_logo, Activation_Screen_logoevent_handler);
+}
+
 static void WifiPage_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
@@ -74,28 +110,7 @@ void events_init_WifiPage_Screen(lv_ui *ui)
 	lv_obj_set_event_cb(ui->WifiPage_Screen_logo, WifiPage_Screen_logoevent_handler);
 }
 
-static void Activation_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_CLICKED:
-	{
-		if (!lv_debug_check_obj_valid(guider_ui.Home_Screen))
-			setup_scr_Home_Screen(&guider_ui);
-		lv_scr_load_anim(guider_ui.Home_Screen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 400, 75, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-void events_init_Activation_Screen(lv_ui *ui)
-{
-	lv_obj_set_event_cb(ui->Activation_Screen_logo, Activation_Screen_logoevent_handler);
-}
-
-static void Home_Screen_open_menu_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+static void Home_Screen_menu_iconevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
@@ -129,7 +144,7 @@ static void Home_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
 
 void events_init_Home_Screen(lv_ui *ui)
 {
-	lv_obj_set_event_cb(ui->Home_Screen_open_menu_btn, Home_Screen_open_menu_btnevent_handler);
+	lv_obj_set_event_cb(ui->Home_Screen_menu_icon, Home_Screen_menu_iconevent_handler);
 	lv_obj_set_event_cb(ui->Home_Screen_logo, Home_Screen_logoevent_handler);
 }
 
@@ -316,7 +331,7 @@ static void Settings_Screen_btn_2event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 		if (!lv_debug_check_obj_valid(guider_ui.WiFiReset_Screen))
 			setup_scr_WiFiReset_Screen(&guider_ui);
-		lv_scr_load_anim(guider_ui.WiFiReset_Screen, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 350, 75, true);
+		lv_scr_load_anim(guider_ui.WiFiReset_Screen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 350, 75, true);
 	}
 		break;
 	default:

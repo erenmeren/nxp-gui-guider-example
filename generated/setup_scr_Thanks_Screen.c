@@ -213,24 +213,24 @@ void setup_scr_Thanks_Screen(lv_ui *ui){
 	lv_obj_set_size(ui->Thanks_Screen_co2_container, 86, 104);
 	lv_obj_set_click(ui->Thanks_Screen_co2_container, false);
 
-	//Write codes Thanks_Screen_img_1
-	ui->Thanks_Screen_img_1 = lv_img_create(ui->Thanks_Screen_co2_container, NULL);
+	//Write codes Thanks_Screen_co2_img
+	ui->Thanks_Screen_co2_img = lv_img_create(ui->Thanks_Screen_co2_container, NULL);
 
-	//Write style LV_IMG_PART_MAIN for Thanks_Screen_img_1
-	static lv_style_t style_Thanks_Screen_img_1_main;
-	lv_style_reset(&style_Thanks_Screen_img_1_main);
+	//Write style LV_IMG_PART_MAIN for Thanks_Screen_co2_img
+	static lv_style_t style_Thanks_Screen_co2_img_main;
+	lv_style_reset(&style_Thanks_Screen_co2_img_main);
 
-	//Write style state: LV_STATE_DEFAULT for style_Thanks_Screen_img_1_main
-	lv_style_set_image_recolor(&style_Thanks_Screen_img_1_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_image_recolor_opa(&style_Thanks_Screen_img_1_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_image_opa(&style_Thanks_Screen_img_1_main, LV_STATE_DEFAULT, 255);
-	lv_obj_add_style(ui->Thanks_Screen_img_1, LV_IMG_PART_MAIN, &style_Thanks_Screen_img_1_main);
-	lv_obj_set_pos(ui->Thanks_Screen_img_1, 21, 10);
-	lv_obj_set_size(ui->Thanks_Screen_img_1, 45, 45);
-	lv_obj_set_click(ui->Thanks_Screen_img_1, true);
-	lv_img_set_src(ui->Thanks_Screen_img_1,&_CO_alpha_45x45);
-	lv_img_set_pivot(ui->Thanks_Screen_img_1, 0,0);
-	lv_img_set_angle(ui->Thanks_Screen_img_1, 0);
+	//Write style state: LV_STATE_DEFAULT for style_Thanks_Screen_co2_img_main
+	lv_style_set_image_recolor(&style_Thanks_Screen_co2_img_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_image_recolor_opa(&style_Thanks_Screen_co2_img_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_image_opa(&style_Thanks_Screen_co2_img_main, LV_STATE_DEFAULT, 255);
+	lv_obj_add_style(ui->Thanks_Screen_co2_img, LV_IMG_PART_MAIN, &style_Thanks_Screen_co2_img_main);
+	lv_obj_set_pos(ui->Thanks_Screen_co2_img, 21, 10);
+	lv_obj_set_size(ui->Thanks_Screen_co2_img, 45, 45);
+	lv_obj_set_click(ui->Thanks_Screen_co2_img, true);
+	lv_img_set_src(ui->Thanks_Screen_co2_img,&_CO_alpha_45x45);
+	lv_img_set_pivot(ui->Thanks_Screen_co2_img, 0,0);
+	lv_img_set_angle(ui->Thanks_Screen_co2_img, 0);
 
 	//Write codes Thanks_Screen_co2_unit_label
 	ui->Thanks_Screen_co2_unit_label = lv_label_create(ui->Thanks_Screen_co2_container, NULL);
@@ -313,24 +313,24 @@ void setup_scr_Thanks_Screen(lv_ui *ui){
 	lv_obj_set_size(ui->Thanks_Screen_water_container, 86, 104);
 	lv_obj_set_click(ui->Thanks_Screen_water_container, false);
 
-	//Write codes Thanks_Screen_img_2
-	ui->Thanks_Screen_img_2 = lv_img_create(ui->Thanks_Screen_water_container, NULL);
+	//Write codes Thanks_Screen_water_img
+	ui->Thanks_Screen_water_img = lv_img_create(ui->Thanks_Screen_water_container, NULL);
 
-	//Write style LV_IMG_PART_MAIN for Thanks_Screen_img_2
-	static lv_style_t style_Thanks_Screen_img_2_main;
-	lv_style_reset(&style_Thanks_Screen_img_2_main);
+	//Write style LV_IMG_PART_MAIN for Thanks_Screen_water_img
+	static lv_style_t style_Thanks_Screen_water_img_main;
+	lv_style_reset(&style_Thanks_Screen_water_img_main);
 
-	//Write style state: LV_STATE_DEFAULT for style_Thanks_Screen_img_2_main
-	lv_style_set_image_recolor(&style_Thanks_Screen_img_2_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_image_recolor_opa(&style_Thanks_Screen_img_2_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_image_opa(&style_Thanks_Screen_img_2_main, LV_STATE_DEFAULT, 255);
-	lv_obj_add_style(ui->Thanks_Screen_img_2, LV_IMG_PART_MAIN, &style_Thanks_Screen_img_2_main);
-	lv_obj_set_pos(ui->Thanks_Screen_img_2, 21, 10);
-	lv_obj_set_size(ui->Thanks_Screen_img_2, 45, 45);
-	lv_obj_set_click(ui->Thanks_Screen_img_2, true);
-	lv_img_set_src(ui->Thanks_Screen_img_2,&_Water_alpha_45x45);
-	lv_img_set_pivot(ui->Thanks_Screen_img_2, 0,0);
-	lv_img_set_angle(ui->Thanks_Screen_img_2, 0);
+	//Write style state: LV_STATE_DEFAULT for style_Thanks_Screen_water_img_main
+	lv_style_set_image_recolor(&style_Thanks_Screen_water_img_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_image_recolor_opa(&style_Thanks_Screen_water_img_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_image_opa(&style_Thanks_Screen_water_img_main, LV_STATE_DEFAULT, 255);
+	lv_obj_add_style(ui->Thanks_Screen_water_img, LV_IMG_PART_MAIN, &style_Thanks_Screen_water_img_main);
+	lv_obj_set_pos(ui->Thanks_Screen_water_img, 21, 10);
+	lv_obj_set_size(ui->Thanks_Screen_water_img, 45, 45);
+	lv_obj_set_click(ui->Thanks_Screen_water_img, true);
+	lv_img_set_src(ui->Thanks_Screen_water_img,&_Water_alpha_45x45);
+	lv_img_set_pivot(ui->Thanks_Screen_water_img, 0,0);
+	lv_img_set_angle(ui->Thanks_Screen_water_img, 0);
 
 	//Write codes Thanks_Screen_water_unit_label
 	ui->Thanks_Screen_water_unit_label = lv_label_create(ui->Thanks_Screen_water_container, NULL);
