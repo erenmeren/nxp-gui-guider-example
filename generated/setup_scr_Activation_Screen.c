@@ -40,6 +40,144 @@ void setup_scr_Activation_Screen(lv_ui *ui){
 	lv_obj_set_size(ui->Activation_Screen_main_container, 320, 240);
 	lv_obj_set_click(ui->Activation_Screen_main_container, false);
 
+	//Write codes Activation_Screen_img_3
+	ui->Activation_Screen_img_3 = lv_img_create(ui->Activation_Screen_main_container, NULL);
+
+	//Write style LV_IMG_PART_MAIN for Activation_Screen_img_3
+	static lv_style_t style_Activation_Screen_img_3_main;
+	lv_style_reset(&style_Activation_Screen_img_3_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Activation_Screen_img_3_main
+	lv_style_set_image_recolor(&style_Activation_Screen_img_3_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_image_recolor_opa(&style_Activation_Screen_img_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_image_opa(&style_Activation_Screen_img_3_main, LV_STATE_DEFAULT, 255);
+	lv_obj_add_style(ui->Activation_Screen_img_3, LV_IMG_PART_MAIN, &style_Activation_Screen_img_3_main);
+	lv_obj_set_pos(ui->Activation_Screen_img_3, 112, 74);
+	lv_obj_set_size(ui->Activation_Screen_img_3, 23, 23);
+	lv_obj_set_click(ui->Activation_Screen_img_3, true);
+	lv_img_set_src(ui->Activation_Screen_img_3,&_checkblack_alpha_23x23);
+	lv_img_set_pivot(ui->Activation_Screen_img_3, 0,0);
+	lv_img_set_angle(ui->Activation_Screen_img_3, 0);
+
+	//Write codes Activation_Screen_img_2
+	ui->Activation_Screen_img_2 = lv_img_create(ui->Activation_Screen_main_container, NULL);
+
+	//Write style LV_IMG_PART_MAIN for Activation_Screen_img_2
+	static lv_style_t style_Activation_Screen_img_2_main;
+	lv_style_reset(&style_Activation_Screen_img_2_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Activation_Screen_img_2_main
+	lv_style_set_image_recolor(&style_Activation_Screen_img_2_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_image_recolor_opa(&style_Activation_Screen_img_2_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_image_opa(&style_Activation_Screen_img_2_main, LV_STATE_DEFAULT, 255);
+	lv_obj_add_style(ui->Activation_Screen_img_2, LV_IMG_PART_MAIN, &style_Activation_Screen_img_2_main);
+	lv_obj_set_pos(ui->Activation_Screen_img_2, 82, 55);
+	lv_obj_set_size(ui->Activation_Screen_img_2, 23, 23);
+	lv_obj_set_click(ui->Activation_Screen_img_2, true);
+	lv_img_set_src(ui->Activation_Screen_img_2,&_checkblack_alpha_23x23);
+	lv_img_set_pivot(ui->Activation_Screen_img_2, 0,0);
+	lv_img_set_angle(ui->Activation_Screen_img_2, 0);
+
+	//Write codes Activation_Screen_img_1
+	ui->Activation_Screen_img_1 = lv_img_create(ui->Activation_Screen_main_container, NULL);
+
+	//Write style LV_IMG_PART_MAIN for Activation_Screen_img_1
+	static lv_style_t style_Activation_Screen_img_1_main;
+	lv_style_reset(&style_Activation_Screen_img_1_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Activation_Screen_img_1_main
+	lv_style_set_image_recolor(&style_Activation_Screen_img_1_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_image_recolor_opa(&style_Activation_Screen_img_1_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_image_opa(&style_Activation_Screen_img_1_main, LV_STATE_DEFAULT, 255);
+	lv_obj_add_style(ui->Activation_Screen_img_1, LV_IMG_PART_MAIN, &style_Activation_Screen_img_1_main);
+	lv_obj_set_pos(ui->Activation_Screen_img_1, 86, 35);
+	lv_obj_set_size(ui->Activation_Screen_img_1, 23, 23);
+	lv_obj_set_click(ui->Activation_Screen_img_1, true);
+	lv_img_set_src(ui->Activation_Screen_img_1,&_checkblack_alpha_23x23);
+	lv_img_set_pivot(ui->Activation_Screen_img_1, 0,0);
+	lv_img_set_angle(ui->Activation_Screen_img_1, 0);
+
+	//Write codes Activation_Screen_label_5
+	ui->Activation_Screen_label_5 = lv_label_create(ui->Activation_Screen_main_container, NULL);
+	lv_label_set_text(ui->Activation_Screen_label_5, "Security");
+	lv_label_set_long_mode(ui->Activation_Screen_label_5, LV_LABEL_LONG_BREAK);
+	lv_label_set_align(ui->Activation_Screen_label_5, LV_LABEL_ALIGN_CENTER);
+
+	//Write style LV_LABEL_PART_MAIN for Activation_Screen_label_5
+	static lv_style_t style_Activation_Screen_label_5_main;
+	lv_style_reset(&style_Activation_Screen_label_5_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Activation_Screen_label_5_main
+	lv_style_set_radius(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_bg_color(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_text_color(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_text_font(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_12);
+	lv_style_set_text_letter_space(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_left(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_right(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_top(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_bottom(&style_Activation_Screen_label_5_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Activation_Screen_label_5, LV_LABEL_PART_MAIN, &style_Activation_Screen_label_5_main);
+	lv_obj_set_pos(ui->Activation_Screen_label_5, 135, 81);
+	lv_obj_set_size(ui->Activation_Screen_label_5, 50, 0);
+
+	//Write codes Activation_Screen_label_4
+	ui->Activation_Screen_label_4 = lv_label_create(ui->Activation_Screen_main_container, NULL);
+	lv_label_set_text(ui->Activation_Screen_label_4, "Otherlink Services");
+	lv_label_set_long_mode(ui->Activation_Screen_label_4, LV_LABEL_LONG_BREAK);
+	lv_label_set_align(ui->Activation_Screen_label_4, LV_LABEL_ALIGN_CENTER);
+
+	//Write style LV_LABEL_PART_MAIN for Activation_Screen_label_4
+	static lv_style_t style_Activation_Screen_label_4_main;
+	lv_style_reset(&style_Activation_Screen_label_4_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Activation_Screen_label_4_main
+	lv_style_set_radius(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_bg_color(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_text_color(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_text_font(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_12);
+	lv_style_set_text_letter_space(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_left(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_right(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_top(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_bottom(&style_Activation_Screen_label_4_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Activation_Screen_label_4, LV_LABEL_PART_MAIN, &style_Activation_Screen_label_4_main);
+	lv_obj_set_pos(ui->Activation_Screen_label_4, 105, 61);
+	lv_obj_set_size(ui->Activation_Screen_label_4, 110, 0);
+
+	//Write codes Activation_Screen_label_3
+	ui->Activation_Screen_label_3 = lv_label_create(ui->Activation_Screen_main_container, NULL);
+	lv_label_set_text(ui->Activation_Screen_label_3, "WiFi Connection");
+	lv_label_set_long_mode(ui->Activation_Screen_label_3, LV_LABEL_LONG_BREAK);
+	lv_label_set_align(ui->Activation_Screen_label_3, LV_LABEL_ALIGN_CENTER);
+
+	//Write style LV_LABEL_PART_MAIN for Activation_Screen_label_3
+	static lv_style_t style_Activation_Screen_label_3_main;
+	lv_style_reset(&style_Activation_Screen_label_3_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Activation_Screen_label_3_main
+	lv_style_set_radius(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_bg_color(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_text_color(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_text_font(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_12);
+	lv_style_set_text_letter_space(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_left(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_right(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_top(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_bottom(&style_Activation_Screen_label_3_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Activation_Screen_label_3, LV_LABEL_PART_MAIN, &style_Activation_Screen_label_3_main);
+	lv_obj_set_pos(ui->Activation_Screen_label_3, 109, 41);
+	lv_obj_set_size(ui->Activation_Screen_label_3, 100, 0);
+
 	//Write codes Activation_Screen_spinner
 	ui->Activation_Screen_spinner = lv_spinner_create(ui->Activation_Screen_main_container, NULL);
 	lv_spinner_set_arc_length(ui->Activation_Screen_spinner,60);
@@ -72,7 +210,7 @@ void setup_scr_Activation_Screen(lv_ui *ui){
 	lv_style_set_line_color(&style_Activation_Screen_spinner_indic, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
 	lv_style_set_line_width(&style_Activation_Screen_spinner_indic, LV_STATE_DEFAULT, 7);
 	lv_obj_add_style(ui->Activation_Screen_spinner, LV_SPINNER_PART_INDIC, &style_Activation_Screen_spinner_indic);
-	lv_obj_set_pos(ui->Activation_Screen_spinner, 142.5, 172);
+	lv_obj_set_pos(ui->Activation_Screen_spinner, 142.5, 190);
 	lv_obj_set_size(ui->Activation_Screen_spinner, 35, 35);
 
 	//Write codes Activation_Screen_send_activation_email_btn
@@ -94,7 +232,7 @@ void setup_scr_Activation_Screen(lv_ui *ui){
 	lv_style_set_outline_color(&style_Activation_Screen_send_activation_email_btn_main, LV_STATE_DEFAULT, lv_color_make(0xd4, 0xd7, 0xd9));
 	lv_style_set_outline_opa(&style_Activation_Screen_send_activation_email_btn_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->Activation_Screen_send_activation_email_btn, LV_BTN_PART_MAIN, &style_Activation_Screen_send_activation_email_btn_main);
-	lv_obj_set_pos(ui->Activation_Screen_send_activation_email_btn, 110, 172);
+	lv_obj_set_pos(ui->Activation_Screen_send_activation_email_btn, 110, 190);
 	lv_obj_set_size(ui->Activation_Screen_send_activation_email_btn, 100, 34);
 	ui->Activation_Screen_send_activation_email_btn_label = lv_label_create(ui->Activation_Screen_send_activation_email_btn, NULL);
 	lv_label_set_text(ui->Activation_Screen_send_activation_email_btn_label, "Send again");
@@ -143,7 +281,7 @@ void setup_scr_Activation_Screen(lv_ui *ui){
 	lv_style_set_pad_top(&style_Activation_Screen_cont_1_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_Activation_Screen_cont_1_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->Activation_Screen_cont_1, LV_CONT_PART_MAIN, &style_Activation_Screen_cont_1_main);
-	lv_obj_set_pos(ui->Activation_Screen_cont_1, 50, 67);
+	lv_obj_set_pos(ui->Activation_Screen_cont_1, 50, 115);
 	lv_obj_set_size(ui->Activation_Screen_cont_1, 220, 60);
 	lv_obj_set_click(ui->Activation_Screen_cont_1, false);
 

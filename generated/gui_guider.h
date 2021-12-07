@@ -30,6 +30,12 @@ typedef struct
 	lv_obj_t *AccessPoint_Screen_qr_container;
 	lv_obj_t *Activation_Screen;
 	lv_obj_t *Activation_Screen_main_container;
+	lv_obj_t *Activation_Screen_img_3;
+	lv_obj_t *Activation_Screen_img_2;
+	lv_obj_t *Activation_Screen_img_1;
+	lv_obj_t *Activation_Screen_label_5;
+	lv_obj_t *Activation_Screen_label_4;
+	lv_obj_t *Activation_Screen_label_3;
 	lv_obj_t *Activation_Screen_spinner;
 	lv_obj_t *Activation_Screen_send_activation_email_btn;
 	lv_obj_t *Activation_Screen_send_activation_email_btn_label;
@@ -177,6 +183,7 @@ LV_IMG_DECLARE(_NFCLogo_alpha_64x54);
 LV_IMG_DECLARE(_Battery_alpha_21x12);
 LV_IMG_DECLARE(_WiFiSignal_alpha_13x12);
 LV_IMG_DECLARE(_Printing_alpha_177x161);
+LV_IMG_DECLARE(_checkblack_alpha_23x23);
 LV_IMG_DECLARE(_Logo_alpha_63x11);
 
 #ifdef __cplusplus
