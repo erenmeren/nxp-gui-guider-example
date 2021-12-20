@@ -29,9 +29,9 @@ void setup_scr_AccessPoint_Screen(lv_ui *ui){
 	lv_style_set_bg_grad_color(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, lv_color_make(0xf0, 0xf1, 0xf1));
 	lv_style_set_bg_grad_dir(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
 	lv_style_set_bg_opa(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 255);
-	lv_style_set_border_color(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, lv_color_make(0x99, 0x99, 0x99));
-	lv_style_set_border_width(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_border_opa(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_border_color(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, lv_color_make(0x8b, 0x3f, 0xa6));
+	lv_style_set_border_width(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 7);
+	lv_style_set_border_opa(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 200);
 	lv_style_set_pad_left(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_right(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_top(&style_AccessPoint_Screen_main_container_main, LV_STATE_DEFAULT, 0);
@@ -84,16 +84,16 @@ void setup_scr_AccessPoint_Screen(lv_ui *ui){
 	lv_style_set_bg_grad_color(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
 	lv_style_set_bg_grad_dir(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
 	lv_style_set_bg_opa(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_text_color(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, lv_color_make(0x70, 0x70, 0x71));
-	lv_style_set_text_font(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, &lv_font_Prompt_Light_9);
+	lv_style_set_text_color(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, lv_color_make(0x09, 0x09, 0x0b));
+	lv_style_set_text_font(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_12);
 	lv_style_set_text_letter_space(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_left(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_right(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_top(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_AccessPoint_Screen_ssid_name_label_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->AccessPoint_Screen_ssid_name_label, LV_LABEL_PART_MAIN, &style_AccessPoint_Screen_ssid_name_label_main);
-	lv_obj_set_pos(ui->AccessPoint_Screen_ssid_name_label, 90, 74);
-	lv_obj_set_size(ui->AccessPoint_Screen_ssid_name_label, 140, 0);
+	lv_obj_set_pos(ui->AccessPoint_Screen_ssid_name_label, 60, 74);
+	lv_obj_set_size(ui->AccessPoint_Screen_ssid_name_label, 200, 0);
 
 	//Write codes AccessPoint_Screen_label_2
 	ui->AccessPoint_Screen_label_2 = lv_label_create(ui->AccessPoint_Screen_main_container, NULL);

@@ -53,6 +53,27 @@ void events_init_AccessPoint_Screen(lv_ui *ui)
 	lv_obj_set_event_cb(ui->AccessPoint_Screen_logo, AccessPoint_Screen_logoevent_handler);
 }
 
+static void WifiPage_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_CLICKED:
+	{
+		if (!lv_debug_check_obj_valid(guider_ui.Activation_Screen))
+			setup_scr_Activation_Screen(&guider_ui);
+		lv_scr_load_anim(guider_ui.Activation_Screen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 400, 75, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+void events_init_WifiPage_Screen(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->WifiPage_Screen_logo, WifiPage_Screen_logoevent_handler);
+}
+
 static void Activation_Screen_send_activation_email_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
@@ -87,27 +108,6 @@ void events_init_Activation_Screen(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->Activation_Screen_send_activation_email_btn, Activation_Screen_send_activation_email_btnevent_handler);
 	lv_obj_set_event_cb(ui->Activation_Screen_logo, Activation_Screen_logoevent_handler);
-}
-
-static void WifiPage_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_CLICKED:
-	{
-		if (!lv_debug_check_obj_valid(guider_ui.Activation_Screen))
-			setup_scr_Activation_Screen(&guider_ui);
-		lv_scr_load_anim(guider_ui.Activation_Screen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 400, 75, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-void events_init_WifiPage_Screen(lv_ui *ui)
-{
-	lv_obj_set_event_cb(ui->WifiPage_Screen_logo, WifiPage_Screen_logoevent_handler);
 }
 
 static void Home_Screen_menu_iconevent_handler(lv_obj_t * obj, lv_event_t event)
@@ -211,27 +211,15 @@ void events_init_Thanks_Screen(lv_ui *ui)
 	lv_obj_set_event_cb(ui->Thanks_Screen_logo, Thanks_Screen_logoevent_handler);
 }
 
-static void Password_Screen_btn_5event_handler(lv_obj_t * obj, lv_event_t event)
+static void Password_Screen_back_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_PRESSED:
 	{
-		lv_obj_set_style_local_bg_color(guider_ui.Password_Screen_led_5, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void Password_Screen_btn_4event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		lv_obj_set_style_local_bg_color(guider_ui.Password_Screen_led_4, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+		if (!lv_debug_check_obj_valid(guider_ui.Home_Screen))
+			setup_scr_Home_Screen(&guider_ui);
+		lv_scr_load_anim(guider_ui.Home_Screen, LV_SCR_LOAD_ANIM_MOVE_BOTTOM, 350, 75, true);
 	}
 		break;
 	default:
@@ -299,12 +287,43 @@ static void Password_Screen_logoevent_handler(lv_obj_t * obj, lv_event_t event)
 
 void events_init_Password_Screen(lv_ui *ui)
 {
-	lv_obj_set_event_cb(ui->Password_Screen_btn_5, Password_Screen_btn_5event_handler);
-	lv_obj_set_event_cb(ui->Password_Screen_btn_4, Password_Screen_btn_4event_handler);
+	lv_obj_set_event_cb(ui->Password_Screen_back_btn, Password_Screen_back_btnevent_handler);
 	lv_obj_set_event_cb(ui->Password_Screen_btn_3, Password_Screen_btn_3event_handler);
 	lv_obj_set_event_cb(ui->Password_Screen_btn_2, Password_Screen_btn_2event_handler);
 	lv_obj_set_event_cb(ui->Password_Screen_btn_1, Password_Screen_btn_1event_handler);
 	lv_obj_set_event_cb(ui->Password_Screen_logo, Password_Screen_logoevent_handler);
+}
+
+static void Settings_Screen_back_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		if (!lv_debug_check_obj_valid(guider_ui.Home_Screen))
+			setup_scr_Home_Screen(&guider_ui);
+		lv_scr_load_anim(guider_ui.Home_Screen, LV_SCR_LOAD_ANIM_MOVE_BOTTOM, 350, 75, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void Settings_Screen_btn_4event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		if (!lv_debug_check_obj_valid(guider_ui.About_Screen))
+			setup_scr_About_Screen(&guider_ui);
+		lv_scr_load_anim(guider_ui.About_Screen, LV_SCR_LOAD_ANIM_MOVE_LEFT, 350, 75, true);
+	}
+		break;
+	default:
+		break;
+	}
 }
 
 static void Settings_Screen_btn_3event_handler(lv_obj_t * obj, lv_event_t event)
@@ -357,6 +376,8 @@ static void Settings_Screen_btn_1event_handler(lv_obj_t * obj, lv_event_t event)
 
 void events_init_Settings_Screen(lv_ui *ui)
 {
+	lv_obj_set_event_cb(ui->Settings_Screen_back_btn, Settings_Screen_back_btnevent_handler);
+	lv_obj_set_event_cb(ui->Settings_Screen_btn_4, Settings_Screen_btn_4event_handler);
 	lv_obj_set_event_cb(ui->Settings_Screen_btn_3, Settings_Screen_btn_3event_handler);
 	lv_obj_set_event_cb(ui->Settings_Screen_btn_2, Settings_Screen_btn_2event_handler);
 	lv_obj_set_event_cb(ui->Settings_Screen_btn_1, Settings_Screen_btn_1event_handler);
@@ -457,4 +478,25 @@ void events_init_FactoryReset_Screen(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->FactoryReset_Screen_btn_2, FactoryReset_Screen_btn_2event_handler);
 	lv_obj_set_event_cb(ui->FactoryReset_Screen_btn_1, FactoryReset_Screen_btn_1event_handler);
+}
+
+static void About_Screen_btn_1event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		if (!lv_debug_check_obj_valid(guider_ui.Settings_Screen))
+			setup_scr_Settings_Screen(&guider_ui);
+		lv_scr_load_anim(guider_ui.Settings_Screen, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 350, 75, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+void events_init_About_Screen(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->About_Screen_btn_1, About_Screen_btn_1event_handler);
 }

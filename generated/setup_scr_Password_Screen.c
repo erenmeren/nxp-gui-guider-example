@@ -40,6 +40,58 @@ void setup_scr_Password_Screen(lv_ui *ui){
 	lv_obj_set_size(ui->Password_Screen_main_container, 320, 240);
 	lv_obj_set_click(ui->Password_Screen_main_container, false);
 
+	//Write codes Password_Screen_btn_12
+	ui->Password_Screen_btn_12 = lv_btn_create(ui->Password_Screen_main_container, NULL);
+
+	//Write style LV_BTN_PART_MAIN for Password_Screen_btn_12
+	static lv_style_t style_Password_Screen_btn_12_main;
+	lv_style_reset(&style_Password_Screen_btn_12_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Password_Screen_btn_12_main
+	lv_style_set_radius(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, 10);
+	lv_style_set_bg_color(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0x00, 0x00));
+	lv_style_set_bg_grad_color(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0x00, 0x00));
+	lv_style_set_bg_grad_dir(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_border_color(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, lv_color_make(0x01, 0xa2, 0xb1));
+	lv_style_set_border_width(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_border_opa(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_outline_color(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, lv_color_make(0xd4, 0xd7, 0xd9));
+	lv_style_set_outline_opa(&style_Password_Screen_btn_12_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Password_Screen_btn_12, LV_BTN_PART_MAIN, &style_Password_Screen_btn_12_main);
+	lv_obj_set_pos(ui->Password_Screen_btn_12, 214, 198);
+	lv_obj_set_size(ui->Password_Screen_btn_12, 90, 30);
+	ui->Password_Screen_btn_12_label = lv_label_create(ui->Password_Screen_btn_12, NULL);
+	lv_label_set_text(ui->Password_Screen_btn_12_label, "DEL");
+	lv_obj_set_style_local_text_color(ui->Password_Screen_btn_12_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_obj_set_style_local_text_font(ui->Password_Screen_btn_12_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_14);
+
+	//Write codes Password_Screen_back_btn
+	ui->Password_Screen_back_btn = lv_btn_create(ui->Password_Screen_main_container, NULL);
+
+	//Write style LV_BTN_PART_MAIN for Password_Screen_back_btn
+	static lv_style_t style_Password_Screen_back_btn_main;
+	lv_style_reset(&style_Password_Screen_back_btn_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_Password_Screen_back_btn_main
+	lv_style_set_radius(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, 10);
+	lv_style_set_bg_color(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_bg_grad_color(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_bg_grad_dir(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_border_color(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, lv_color_make(0x01, 0xa2, 0xb1));
+	lv_style_set_border_width(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_border_opa(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_outline_color(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, lv_color_make(0xd4, 0xd7, 0xd9));
+	lv_style_set_outline_opa(&style_Password_Screen_back_btn_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->Password_Screen_back_btn, LV_BTN_PART_MAIN, &style_Password_Screen_back_btn_main);
+	lv_obj_set_pos(ui->Password_Screen_back_btn, 20, 198);
+	lv_obj_set_size(ui->Password_Screen_back_btn, 90, 30);
+	ui->Password_Screen_back_btn_label = lv_label_create(ui->Password_Screen_back_btn, NULL);
+	lv_label_set_text(ui->Password_Screen_back_btn_label, "Back");
+	lv_obj_set_style_local_text_color(ui->Password_Screen_back_btn_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_obj_set_style_local_text_font(ui->Password_Screen_back_btn_label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, &lv_font_Prompt_Medium_15);
+
 	//Write codes Password_Screen_label_1
 	ui->Password_Screen_label_1 = lv_label_create(ui->Password_Screen_main_container, NULL);
 	lv_label_set_text(ui->Password_Screen_label_1, "Enter Passcode");
@@ -390,7 +442,7 @@ void setup_scr_Password_Screen(lv_ui *ui){
 	lv_style_set_border_width(&style_Password_Screen_led_2_main, LV_STATE_DEFAULT, 1);
 	lv_style_set_border_opa(&style_Password_Screen_led_2_main, LV_STATE_DEFAULT, 255);
 	lv_obj_add_style(ui->Password_Screen_led_2, LV_LED_PART_MAIN, &style_Password_Screen_led_2_main);
-	lv_obj_set_pos(ui->Password_Screen_led_2, 136, 57);
+	lv_obj_set_pos(ui->Password_Screen_led_2, 140, 57);
 	lv_obj_set_size(ui->Password_Screen_led_2, 14, 14);
 	lv_led_set_bright(ui->Password_Screen_led_2, 255);
 
@@ -413,7 +465,7 @@ void setup_scr_Password_Screen(lv_ui *ui){
 	lv_style_set_border_width(&style_Password_Screen_led_3_main, LV_STATE_DEFAULT, 1);
 	lv_style_set_border_opa(&style_Password_Screen_led_3_main, LV_STATE_DEFAULT, 255);
 	lv_obj_add_style(ui->Password_Screen_led_3, LV_LED_PART_MAIN, &style_Password_Screen_led_3_main);
-	lv_obj_set_pos(ui->Password_Screen_led_3, 154, 57);
+	lv_obj_set_pos(ui->Password_Screen_led_3, 161, 57);
 	lv_obj_set_size(ui->Password_Screen_led_3, 14, 14);
 	lv_led_set_bright(ui->Password_Screen_led_3, 255);
 
@@ -436,32 +488,9 @@ void setup_scr_Password_Screen(lv_ui *ui){
 	lv_style_set_border_width(&style_Password_Screen_led_4_main, LV_STATE_DEFAULT, 1);
 	lv_style_set_border_opa(&style_Password_Screen_led_4_main, LV_STATE_DEFAULT, 255);
 	lv_obj_add_style(ui->Password_Screen_led_4, LV_LED_PART_MAIN, &style_Password_Screen_led_4_main);
-	lv_obj_set_pos(ui->Password_Screen_led_4, 172, 57);
+	lv_obj_set_pos(ui->Password_Screen_led_4, 184, 57);
 	lv_obj_set_size(ui->Password_Screen_led_4, 14, 14);
 	lv_led_set_bright(ui->Password_Screen_led_4, 255);
-
-	//Write codes Password_Screen_led_5
-	ui->Password_Screen_led_5 = lv_led_create(ui->Password_Screen, NULL);
-
-	//Write style LV_LED_PART_MAIN for Password_Screen_led_5
-	static lv_style_t style_Password_Screen_led_5_main;
-	lv_style_reset(&style_Password_Screen_led_5_main);
-
-	//Write style state: LV_STATE_DEFAULT for style_Password_Screen_led_5_main
-	lv_style_set_radius(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, 20);
-	lv_style_set_bg_color(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, lv_color_make(0xf0, 0xf1, 0xf1));
-	lv_style_set_bg_grad_color(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, lv_color_make(0xf0, 0xf1, 0xf1));
-	lv_style_set_bg_grad_dir(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, LV_GRAD_DIR_NONE);
-	lv_style_set_bg_opa(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, 255);
-	lv_style_set_shadow_color(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0xa1, 0xb5));
-	lv_style_set_shadow_width(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_border_color(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, lv_color_make(0xd0, 0xd0, 0xd0));
-	lv_style_set_border_width(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, 1);
-	lv_style_set_border_opa(&style_Password_Screen_led_5_main, LV_STATE_DEFAULT, 255);
-	lv_obj_add_style(ui->Password_Screen_led_5, LV_LED_PART_MAIN, &style_Password_Screen_led_5_main);
-	lv_obj_set_pos(ui->Password_Screen_led_5, 190, 57);
-	lv_obj_set_size(ui->Password_Screen_led_5, 14, 14);
-	lv_led_set_bright(ui->Password_Screen_led_5, 255);
 
 	//Init events for screen
 	events_init_Password_Screen(ui);
