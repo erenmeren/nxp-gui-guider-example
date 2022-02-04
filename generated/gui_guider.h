@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 NXP
+ * Copyright 2022 NXP
  * SPDX-License-Identifier: MIT
  */
 
@@ -52,11 +52,11 @@ typedef struct
 	lv_obj_t *Activation_Screen_label_1;
 	lv_obj_t *Home_Screen;
 	lv_obj_t *Home_Screen_main_container;
+	lv_obj_t *Home_Screen_ncf;
 	lv_obj_t *Home_Screen_menu_icon;
 	lv_obj_t *Home_Screen_full_battery_icon;
 	lv_obj_t *Home_Screen_full_wifi_icon;
 	lv_obj_t *Home_Screen_info_label;
-	lv_obj_t *Home_Screen_time_label;
 	lv_obj_t *Home_Screen_logo;
 	lv_obj_t *Home_Screen_qr_container;
 	lv_obj_t *Loading_Screen;
@@ -193,10 +193,10 @@ void setup_scr_About_Screen(lv_ui *ui);
 LV_IMG_DECLARE(_Tree_alpha_45x45);
 LV_IMG_DECLARE(_CO_alpha_45x45);
 LV_IMG_DECLARE(_Water_alpha_45x45);
-LV_IMG_DECLARE(_Icon_Swipe_alpha_36x22);
 LV_IMG_DECLARE(_NFCLogo_alpha_64x54);
+LV_IMG_DECLARE(_Icon_Swipe_alpha_36x22);
+LV_IMG_DECLARE(_wifiFull_alpha_15x15);
 LV_IMG_DECLARE(_Battery_alpha_21x12);
-LV_IMG_DECLARE(_WiFiSignal_alpha_13x12);
 LV_IMG_DECLARE(_Printing_alpha_177x161);
 LV_IMG_DECLARE(_checkblack_alpha_23x23);
 LV_IMG_DECLARE(_Logo_alpha_63x11);
