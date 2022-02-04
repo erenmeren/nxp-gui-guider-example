@@ -172,6 +172,14 @@ typedef struct
 	lv_obj_t *About_Screen_label_2;
 	lv_obj_t *About_Screen_label_1;
 	lv_obj_t *About_Screen_logo;
+	lv_obj_t *temp_screen;
+	lv_obj_t *temp_screen_cont_1;
+	lv_obj_t *temp_screen_img_6;
+	lv_obj_t *temp_screen_img_5;
+	lv_obj_t *temp_screen_img_4;
+	lv_obj_t *temp_screen_img_3;
+	lv_obj_t *temp_screen_img_2;
+	lv_obj_t *temp_screen_img_1;
 }lv_ui;
 
 void setup_ui(lv_ui *ui);
@@ -190,16 +198,23 @@ void setup_scr_Connectivity_Screen(lv_ui *ui);
 void setup_scr_WiFiReset_Screen(lv_ui *ui);
 void setup_scr_FactoryReset_Screen(lv_ui *ui);
 void setup_scr_About_Screen(lv_ui *ui);
+void setup_scr_temp_screen(lv_ui *ui);
+LV_IMG_DECLARE(_wifiLow_alpha_100x37);
 LV_IMG_DECLARE(_Tree_alpha_45x45);
-LV_IMG_DECLARE(_CO_alpha_45x45);
 LV_IMG_DECLARE(_Water_alpha_45x45);
 LV_IMG_DECLARE(_NFCLogo_alpha_64x54);
 LV_IMG_DECLARE(_Icon_Swipe_alpha_36x22);
-LV_IMG_DECLARE(_wifiFull_alpha_15x15);
+LV_IMG_DECLARE(_wifiFull_alpha_100x42);
+LV_IMG_DECLARE(_Full_alpha_100x38);
+LV_IMG_DECLARE(_level50_alpha_100x38);
 LV_IMG_DECLARE(_Battery_alpha_21x12);
 LV_IMG_DECLARE(_Printing_alpha_177x161);
 LV_IMG_DECLARE(_checkblack_alpha_23x23);
 LV_IMG_DECLARE(_Logo_alpha_63x11);
+LV_IMG_DECLARE(_Low_alpha_100x38);
+LV_IMG_DECLARE(_CO_alpha_45x45);
+LV_IMG_DECLARE(_wifiFull_alpha_15x15);
+LV_IMG_DECLARE(_wifiMid_alpha_100x37);
 
 #ifdef __cplusplus
 }
